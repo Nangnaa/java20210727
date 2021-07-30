@@ -6,15 +6,15 @@ public class ArrayMinMax {
         int max = score[0];
         int min = score[0];
         int total = 0;
-
-        for (int i = 0; i < score.length; i++) {
-            if(score[i]>max) max = score[i];
-            if(score[i]<min) min = score[i];
-            total += score[i];
+        for (int i = 0; i <score.length ; i++) {
+                if(score[i]>max) max=score[i];
+                if(score[i]<min) min=score[i];
+                total += score[i];
         }
         System.out.println("최대값:"+max);
         System.out.println("최소값:"+min);
-        System.out.printf("총합  %3d %n", total);
-        System.out.printf("평균  %5.2f %n", (float)total/score.length);
+        System.out.printf("총합 %3d %n", total);
+        System.out.printf("평균 %5.2f %n",(float) total/score.length);
     }
+
 }
