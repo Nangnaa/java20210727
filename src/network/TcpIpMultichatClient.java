@@ -24,7 +24,7 @@ public class TcpIpMultichatClient {
   }
 
   static class Sender extends Thread {
-    Scanner scan = new Scanner(System.in);//키보드입력받기 위한 인스턴스
+//    Scanner scan = new Scanner(System.in);//키보드입력받기 위한 인스턴스
     Socket socket; //네트워크를 사용하기 위한 통로
     DataOutputStream out;//입출력스트림(socket에서 획득 그래야 그 네트워크로 보낼수 있음
     String nickName;//통신할 때 구분되는 ID같은 개념
@@ -45,7 +45,7 @@ public class TcpIpMultichatClient {
       try {
         if(out!=null) out.writeUTF(nickName);
         while (out != null) {
-          out.writeUTF("["+nickName+"]"+scan.nextLine());
+          out.writeUTF("["+nickName+"]"+JOptionPane.showInputDialog("메세지를 입력해주세요"));
         }
       } catch (IOException e) {
         e.printStackTrace();
